@@ -5,7 +5,7 @@
     <title>Заказы</title>
 </head>
 <body>
-<h3>Ваши заказы</h3>
+<h2>Ваши заказы</h2>
 <!--получаем и итерируем orders от метода orderUser мейнКонтроллера-->
 <div th:each="order : ${orders}">
   <h3 th:text="'Заказ №' + ${order.getOnumber()}"></h3>

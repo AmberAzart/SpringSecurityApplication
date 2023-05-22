@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h3>Товары в вашей корзине:</h3>
+<h1>Товары в вашей корзине:</h1>
 <div th:each="product: ${cart_product}">
     <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
     <br>

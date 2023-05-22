@@ -12,7 +12,7 @@
 <a href="/admin">Назад в личный кабинет</a>
 <hr>
 <br>
-<h3>Список всех пользователей</h3>
+<h1>Список всех пользователей</h1>
 <br>
 <div th:each="user : ${users}">
   Логин пользователя: <a th:href="@{/admin/user/{id}(id=${user.getId()})}" th:text="${user.getLogin()}"></a>
