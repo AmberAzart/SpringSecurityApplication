@@ -15,6 +15,9 @@
   <p th:text="'Цена: ' + ${order.getPrice()}">
 <!--  #temporals.format позволяет отформатировать значение в то, которое указываем ('dd-MMM-yyyy')-->
   <p th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
-  <p th:text="'Cтатус: ' + ${order.getStatus()}">
+    <p th:text="'Cтатус: ' + ${order.getStatus()}"></p>
+</div>
+<hr>
+   <a href="/person_account">Вернуться на главную страницу</a>
 </body>
 </html>
