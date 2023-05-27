@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <div th:insert="~{head :: copy_head}"></div>
     <title>Список товаров</title>
 </head>
 <body>
+<div th:insert="~{navbar :: navbar}"></div>
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
 
 <!--В Config прописали, что эта страница будет доступна всем пользователям-->
 
@@ -34,11 +39,11 @@
             <label for="descending_price">Отсортировать по убыванию цены</label>
             <p>Категория товара:</p>
             <input type="radio" id="furniture" name="contract" value="furniture">
-            <label for="furniture">Мебель</label>
+            <label for="furniture">Линзы</label>
             <input type="radio" id="appliances" name="contract" value="appliances">
-            <label for="appliances">Бытовая техника</label>
+            <label for="appliances">Растворы</label>
             <input type="radio" id="clothes" name="contract" value="clothes">
-            <label for="clothes">Одежда</label>
+            <label for="clothes">Очки для компьютера</label>
             <br>
             <br>
             <input type="submit" value="Найти">
@@ -72,5 +77,9 @@
     <hr>
 
 </div>
+        </div>
+    </div>
+</div>
+<div th:insert="~{footer :: copy}"></div>
 </body>
 </html>
