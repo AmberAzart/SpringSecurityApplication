@@ -11,6 +11,7 @@
     <div class="row align-items-start">
         <div class="col">
 <h1>Регистрация</h1>
+            <hr>
 
 <form method="post" th:action="@{/registration}" th:object="${person}">
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
@@ -36,7 +37,8 @@
             </div>
         </div>
 </form>
-<a href="/authentication">Войти в систему</a>
+            <hr>
+
         </div>
     </div>
 </div>
