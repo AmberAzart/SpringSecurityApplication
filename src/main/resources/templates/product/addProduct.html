@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <div th:insert="~{head :: copy_head}"></div>
     <title>Добавление товара</title>
 </head>
 <body>
+<div th:fragment="navbar">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="link2">VISION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/admin/product">Назад</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/authentication"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registration"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#link1"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>>
+    </nav>
+</div>
+<div class="container" mt-5>
+    <div class="row align-items-start">
+        <div class="col">
 
 <h1>Добавление товара</h1>
 
@@ -30,7 +64,7 @@ enctype="multipart/form-data" указывает, что форма может �
     <br>
     <br>
     <label for="warehouse">Введите артикул: </label>
-    <input type="text" th:field="*{warehouse}" placeholder="артикул" id="warehouse">
+    <input type="text" th:field="*{warehouse}" placeholder="Артикул" id="warehouse">
     <div style="color:red" th:if="${#fields.hasErrors('warehouse')}" th:errors="*{warehouse}"></div>
     <br>
     <br>
@@ -66,7 +100,12 @@ enctype="multipart/form-data" указывает, что форма может �
     <input type="submit" value="Добавить">
 </form>
 <br>
-<a href="/admin/product">Назад</a>
+
+        </div>
+    </div>
+</div>
+<hr>
+<div th:insert="~{footer :: copy}"></div>
 
 
 

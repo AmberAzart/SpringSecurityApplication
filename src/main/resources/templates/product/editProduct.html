@@ -29,8 +29,8 @@ enctype="multipart/form-data" указывает, что форма может �
   <div style="color:red" th:if="${#fields.hasErrors('price')}" min="1" step="0.10" th:errors="*{price}"></div>
   <br>
   <br>
-  <label for="warehouse">Введите наименование склада: </label>
-  <input type="text" th:field="*{warehouse}" placeholder="Склад" id="warehouse">
+  <label for="warehouse">Введите артикул: </label>
+  <input type="text" th:field="*{warehouse}" placeholder="Артикул" id="warehouse">
   <div style="color:red" th:if="${#fields.hasErrors('warehouse')}" th:errors="*{warehouse}"></div>
   <br>
   <br>

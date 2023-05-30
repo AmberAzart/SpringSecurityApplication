@@ -98,4 +98,7 @@ public class productController {
         model.addAttribute("value_price_do",Do);
         return "/product/product";
     }
+
+
+
 }
